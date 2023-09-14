@@ -37,9 +37,26 @@ delfino.Verso();
 delfino.Nuota();
 Console.WriteLine("--------");
 
+List<Delfino> nuotanti = new List<Delfino>();
+List<IAnimaliCheVolano> volanti = new List<IAnimaliCheVolano>();
+
 IAnimaliCheNuotano pesci;
 IAnimaliCheVolano volatili;
 
 pesci = new Delfino();
 volatili = new Passerotto();
 volatili = new Aquila();
+
+static void FaiVolare(IAnimaliCheVolano volante)
+{
+    volante.Vola();
+}
+
+FaiVolare(passerotto);
+
+static void FaiNuotare(IAnimaliCheNuotano nuotante)
+{
+    nuotante.Nuota();
+}
+
+FaiNuotare(delfino);
